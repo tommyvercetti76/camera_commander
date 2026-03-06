@@ -26,12 +26,15 @@ const ClassicPresetSchema = z.object({
   mode:        z.enum(VALID_MODES).optional().default('apprentice'),
 });
 
+// Gear fields are optional for smart mode — if provided the engine applies
+// gear-aware adjustments (IBIS, flash sync, aperture clamping); if omitted
+// generic recommendations are returned instead.
 const SmartPresetSchema = z.object({
   brand:       z.string().toLowerCase().refine(v => VALID_BRANDS.includes(v), {
                  message: `brand must be one of: ${VALID_BRANDS.join(', ')}`
-               }),
-  cameraModel: z.string().min(2).max(120),
-  lensName:    z.string().min(2).max(120),
+               }).optional(),
+  cameraModel: z.string().min(2).max(120).optional(),
+  lensName:    z.string().min(2).max(120).optional(),
   mode:        z.enum(VALID_MODES),
   interests:   z.array(z.string().min(2).max(40)).min(1).max(16),
 });

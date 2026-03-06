@@ -74,7 +74,7 @@ export default function Result() {
         <ExposureTriangle
           iso={preset.ISO}
           aperture={preset.aperture}
-          shutterSpeed={preset.shutterSpeed}
+          shutterSpeed={preset.shutterSpeedWithIBIS || preset.shutterSpeed}
         />
 
         <ResultCard preset={preset} />

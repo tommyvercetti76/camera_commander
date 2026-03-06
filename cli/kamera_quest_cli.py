@@ -26,7 +26,7 @@ except ImportError:
 # ——— CONFIGURATION ———————————————————————————————————————————————————————
 API_BASE = os.getenv(
     'KAMERA_API_BASE',
-    'https://us-central1-kaayko-api-dev.cloudfunctions.net/api'
+    'https://us-central1-kaaykostore.cloudfunctions.net/api'
 ).rstrip('/')
 
 # ——— HELP TEXT ——————————————————————————————————————————————————————————
@@ -177,19 +177,12 @@ def fetch_preset_meta():
 def fetch_classic_preset(brand, camera, lens, genre, condition, mode):
     """POST /presets/classic → full preset object."""
     payload = {
-        'brand': brand,
-        'camera': {
-            'modelName': camera['modelName'],
-            'ibisStops': camera.get('ibisStops', 0),
-        },
-        'lens': {
-            'lensName': lens['lensName'],
-            'hasOIS':   lens.get('hasOIS', False),
-            'oisStops': lens.get('oisStops', 0),
-        },
-        'genre':     genre,
-        'condition': condition,
-        'mode':      mode,
+        'brand':       brand,
+        'cameraModel': camera['modelName'],
+        'lensName':    lens['lensName'],
+        'genre':       genre,
+        'condition':   condition,
+        'mode':        mode,
     }
     return _post('/presets/classic', payload)
 
@@ -394,8 +387,8 @@ def classic_flow(json_mode=False):
                 input(c("  Press Enter to try again.", 'yellow'))
                 continue
 
-            genre_meta = meta.get('genres', {}).get(genre_key, {})
-            conditions = genre_meta.get('conditions', [])  # [{key, displayName}]
+            # /presets/meta returns {portrait: [{key, displayName}], ...}
+            conditions = meta.get(genre_key, [])  # [{key, displayName}]
 
             if not conditions:
                 print(c("  ⚠  No conditions found for this genre.", 'red'))
@@ -464,10 +457,12 @@ def smart_mode_flow(mode_value, json_mode=False):
         print(json.dumps(resp, indent=2))
         return
 
-    # v2 response: {interest: [{ISO, aperture, shutterSpeed, displayName, ...}]}
+    # API response: {mode, presetsByInterest: [{interest, genre, presets: [...]}]}
     print(c('\n  ' + '═' * 56, 'magenta'))
-    for interest, presets in resp.items():
+    for block in resp.get('presetsByInterest', []):
+        interest = block.get('interest', '?')
         print(c(f"\n  ● {interest.upper()} PRESETS", 'gold'))
+        presets = block.get('presets', [])
         if not presets:
             print(c("    (no presets returned)", 'red'))
             continue

@@ -12,6 +12,10 @@ const MODE_CONFIG = {
   professional: { presetsPerInterest: 5, includeRationale: true,  includeProTip: true  },
 };
 
+// Minimal stub used when no gear is supplied — allows gear-agnostic smart calls
+const GENERIC_CAMERA = { modelName: 'Generic', IBIS: false, ibisStops: 0, weatherSealed: false };
+const GENERIC_LENS   = { lensName: 'Generic', hasOIS: false, oisStops: 0, maxAperture: 0 };
+
 function loadCameraData(brand, modelName) {
   const data = require(path.join(__dirname, '../data/cameras', `${brand}.json`));
   return data.cameras.find(c => c.modelName.toLowerCase() === modelName.toLowerCase());
@@ -23,47 +27,52 @@ function loadLensData(brand, lensName) {
 }
 
 // POST /presets/smart
-// NOTE: This route is mounted at /presets/smart in index.js
-// The actual path called is POST /presets/smart (not /presets/smart/:mode)
+// Gear fields (brand, cameraModel, lensName) are optional.
+// When provided, the engine applies IBIS/flash-sync/aperture-clamping adjustments.
+// When omitted, generic recommendations are returned without gear-specific tuning.
 router.post('/', validate(SmartPresetSchema), (req, res) => {
   const { brand, cameraModel, lensName, mode, interests } = req.body;
   const config = MODE_CONFIG[mode];
+  const gearProvided = brand && cameraModel && lensName;
 
-  let camera;
-  try {
-    camera = loadCameraData(brand, cameraModel);
-  } catch (e) {
-    return res.status(404).json({
-      error: { code: 'BRAND_NOT_FOUND', message: `No camera data for brand: ${brand}` }
-    });
-  }
-  if (!camera) {
-    return res.status(404).json({
-      error: { code: 'CAMERA_NOT_FOUND', message: `Camera not found: ${cameraModel}` }
-    });
-  }
+  let camera = GENERIC_CAMERA;
+  let lens   = GENERIC_LENS;
 
-  let lens;
-  try {
-    lens = loadLensData(brand, lensName);
-  } catch (e) {
-    return res.status(404).json({
-      error: { code: 'BRAND_NOT_FOUND', message: `No lens data for brand: ${brand}` }
-    });
-  }
-  if (!lens) {
-    return res.status(404).json({
-      error: { code: 'LENS_NOT_FOUND', message: `Lens not found: ${lensName}` }
-    });
-  }
+  if (gearProvided) {
+    try {
+      camera = loadCameraData(brand, cameraModel);
+    } catch (e) {
+      return res.status(404).json({
+        error: { code: 'BRAND_NOT_FOUND', message: `No camera data for brand: ${brand}` }
+      });
+    }
+    if (!camera) {
+      return res.status(404).json({
+        error: { code: 'CAMERA_NOT_FOUND', message: `Camera not found: ${cameraModel}` }
+      });
+    }
 
-  if (!validateCompatibility(camera, lens)) {
-    return res.status(400).json({
-      error: {
-        code: 'INCOMPATIBLE_GEAR',
-        message: `${lensName} is not compatible with ${cameraModel}`
-      }
-    });
+    try {
+      lens = loadLensData(brand, lensName);
+    } catch (e) {
+      return res.status(404).json({
+        error: { code: 'BRAND_NOT_FOUND', message: `No lens data for brand: ${brand}` }
+      });
+    }
+    if (!lens) {
+      return res.status(404).json({
+        error: { code: 'LENS_NOT_FOUND', message: `Lens not found: ${lensName}` }
+      });
+    }
+
+    if (!validateCompatibility(camera, lens)) {
+      return res.status(400).json({
+        error: {
+          code: 'INCOMPATIBLE_GEAR',
+          message: `${lensName} is not compatible with ${cameraModel}`
+        }
+      });
+    }
   }
 
   // Map each interest to a genre (fuzzy match against genre display names and keys)
@@ -86,18 +95,25 @@ router.post('/', validate(SmartPresetSchema), (req, res) => {
     const selected = conditionKeys.slice(0, config.presetsPerInterest);
 
     const presets = selected.map(condKey => {
-      const result = resolvePreset(camera, lens, matchedGenre, condKey);
+      const result = resolvePreset(camera, lens, matchedGenre, condKey, mode);
       if (result.error) return null;
 
       const p = Object.assign({}, result.preset);
 
-      // Strip fields based on mode
+      // Strip fields based on mode (resolvePreset already strips via mode param,
+      // but re-apply here for the smart-specific config overrides)
       if (!config.includeRationale) {
         delete p.rationale;
         delete p.commonMistake;
       }
       if (!config.includeProTip) {
         delete p.proTip;
+      }
+
+      // Remove generic gear stubs from response when no real gear was supplied
+      if (!gearProvided) {
+        delete p.camera;
+        delete p.lens;
       }
 
       return p;
@@ -110,12 +126,14 @@ router.post('/', validate(SmartPresetSchema), (req, res) => {
     };
   });
 
-  res.json({
-    mode,
-    camera: { modelName: camera.modelName, IBIS: camera.IBIS },
-    lens:   { lensName: lens.lensName, hasOIS: lens.hasOIS },
-    presetsByInterest,
-  });
+  const responseBody = { mode, presetsByInterest };
+  if (gearProvided) {
+    responseBody.camera = { modelName: camera.modelName, IBIS: camera.IBIS };
+    responseBody.lens   = { lensName: lens.lensName, hasOIS: lens.hasOIS };
+  }
+
+  res.json(responseBody);
 });
 
 module.exports = router;
+

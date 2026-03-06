@@ -12,7 +12,7 @@ const VALID_MODES     = new Set(['Av', 'Tv', 'M', 'P']);
 const VALID_AF_MODES  = new Set(['single', 'continuous', 'manual']);
 const VALID_AF_POINTS = new Set(['single', 'zone', 'wide', 'tracking']);
 const VALID_METERING  = new Set(['evaluative', 'spot', 'center-weighted']);
-const VALID_DRIVE     = new Set(['single', 'continuous_low', 'continuous_high']);
+const VALID_DRIVE     = new Set(['single', 'continuous_low', 'continuous_high', 'interval_timer', 'self_timer_2s']);
 
 describe('Preset data integrity', () => {
   test('all 12 genres are present', () => {

@@ -10,7 +10,15 @@
 const allPresets = require('../data/presets/index');
 const { applyIBISBonus, parseShutterToSeconds, parseMaxShutter } = require('./evCalc');
 
-function resolvePreset(camera, lens, genre, condition) {
+// Controls which educational fields are included per skill level
+const MODE_FIELD_CONFIG = {
+  apprentice:   { includeRationale: false, includeProTip: true,  includeCommonMistake: false },
+  enthusiast:   { includeRationale: true,  includeProTip: false, includeCommonMistake: false },
+  craftsperson: { includeRationale: true,  includeProTip: true,  includeCommonMistake: true  },
+  professional: { includeRationale: true,  includeProTip: true,  includeCommonMistake: true  },
+};
+
+function resolvePreset(camera, lens, genre, condition, mode) {
   const genreData = allPresets[genre.toLowerCase()];
   if (!genreData) {
     return { error: { code: 'GENRE_NOT_FOUND', message: `Genre not found: ${genre}` } };
@@ -27,6 +35,19 @@ function resolvePreset(camera, lens, genre, condition) {
   preset.genre = genre;
   preset.condition = conditionKey;
 
+  // ── Lens constraint clamping ────────────────────────────────────────────────
+  // Ensure aperture doesn't exceed what the lens can physically achieve.
+  // In f-number terms: smaller number = wider opening.
+  // If preset wants f/2.0 but the lens max is f/4, clamp to f/4.
+  if (lens.maxAperture && preset.aperture < lens.maxAperture) {
+    preset.warnings = preset.warnings || [];
+    preset.warnings.push(
+      `Preset recommends f/${preset.aperture} but ${lens.lensName} opens to f/${lens.maxAperture} maximum. Using f/${lens.maxAperture}.`
+    );
+    preset.aperture = lens.maxAperture;
+    preset.apertureAdjusted = true;
+  }
+
   // ── Gear-aware adjustments ──────────────────────────────────────────────────
 
   // IBIS/OIS bonus — apply if preset benefits from stabilisation
@@ -37,7 +58,6 @@ function resolvePreset(camera, lens, genre, condition) {
     const bestStops  = Math.max(cameraIBIS, lensOIS);
     if (bestStops > 0) {
       const newShutter = applyIBISBonus(preset.shutterSpeed, bestStops);
-      // Don't go slower than 1/focal_length handheld rule would allow
       preset.shutterSpeedWithIBIS = newShutter;
       preset.ibisStopsApplied     = bestStops;
     }
@@ -45,19 +65,28 @@ function resolvePreset(camera, lens, genre, condition) {
 
   // Flash sync check — warn if preset exceeds camera's max flash sync
   if (camera.maxFlashSync) {
-    const syncSeconds  = parseShutterToSeconds(camera.maxFlashSync);
+    const syncSeconds   = parseShutterToSeconds(camera.maxFlashSync);
     const presetSeconds = parseShutterToSeconds(preset.shutterSpeed);
     if (presetSeconds < syncSeconds && preset.mode !== 'M') {
       preset.warnings = preset.warnings || [];
-      preset.warnings.push(`Shutter ${preset.shutterSpeed} exceeds flash sync ${camera.maxFlashSync}. Use M mode or HSS flash.`);
+      preset.warnings.push(
+        `Shutter ${preset.shutterSpeed} exceeds flash sync ${camera.maxFlashSync}. Use M mode or HSS flash.`
+      );
     }
   }
 
+  // ── Mode-based field stripping ──────────────────────────────────────────────
+  // Tailor the educational content to the user's skill level.
+  const fieldConfig = MODE_FIELD_CONFIG[mode] || MODE_FIELD_CONFIG.apprentice;
+  if (!fieldConfig.includeRationale)    delete preset.rationale;
+  if (!fieldConfig.includeProTip)        delete preset.proTip;
+  if (!fieldConfig.includeCommonMistake) delete preset.commonMistake;
+
   // Attach gear info to the response
   preset.camera = {
-    modelName:    camera.modelName,
-    IBIS:         camera.IBIS,
-    ibisStops:    camera.ibisStops || 0,
+    modelName:     camera.modelName,
+    IBIS:          camera.IBIS,
+    ibisStops:     camera.ibisStops || 0,
     weatherSealed: camera.weatherSealed || false,
   };
   preset.lens = {

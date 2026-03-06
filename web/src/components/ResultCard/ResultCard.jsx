@@ -25,6 +25,28 @@ export default function ResultCard({ preset }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.2 }}
     >
+      {/* IBIS-adjusted shutter + flash warnings */}
+      {(preset.shutterSpeedWithIBIS || (preset.warnings && preset.warnings.length > 0)) && (
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Gear Adjustments</h2>
+          {preset.shutterSpeedWithIBIS && (
+            <div className={styles.ibisBadge}>
+              <span className={styles.settingLabel}>Stabilised shutter</span>
+              <span className={`${styles.settingValue} mono`}>{preset.shutterSpeedWithIBIS}</span>
+              {preset.ibisStopsApplied && (
+                <span className={styles.ibisNote}>({preset.ibisStopsApplied} stop{preset.ibisStopsApplied !== 1 ? 's' : ''} IBIS/OIS)</span>
+              )}
+            </div>
+          )}
+          {Array.isArray(preset.warnings) && preset.warnings.map((w, i) => (
+            <div key={i} className={`${styles.section} ${styles.warnSection}`} style={{ marginTop: 6 }}>
+              <AlertTriangle size={14} color="var(--crimson)" />
+              <p className={styles.body} style={{ margin: 0 }}>{w}</p>
+            </div>
+          ))}
+        </section>
+      )}
+
       {/* Camera Settings Grid */}
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Camera Settings</h2>

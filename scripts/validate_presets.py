@@ -35,7 +35,7 @@ VALID_MODES     = {'Av', 'Tv', 'M', 'P'}
 VALID_AF_MODES  = {'single', 'continuous', 'manual'}
 VALID_AF_POINTS = {'single', 'zone', 'wide', 'tracking'}
 VALID_METERING  = {'evaluative', 'spot', 'center-weighted'}
-VALID_DRIVE     = {'single', 'continuous_low', 'continuous_high'}
+VALID_DRIVE     = {'single', 'continuous_low', 'continuous_high', 'interval_timer', 'self_timer_2s'}
 
 errors = []
 warnings = []
