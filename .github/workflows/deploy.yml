@@ -6,7 +6,7 @@ on:
 
 # SETUP REQUIRED:
 # Add FIREBASE_SERVICE_ACCOUNT to GitHub repository secrets.
-# Value: the contents of a Firebase service account JSON.
+# Value: the full contents of a Firebase service account JSON.
 # Generate at: Firebase Console → Project Settings → Service Accounts → Generate new key
 # Add the secret at: GitHub repo → Settings → Secrets → Actions → New repository secret
 # The secret value is ONLY stored in GitHub Secrets — never in the codebase.
@@ -39,5 +39,5 @@ jobs:
         with:
           args: deploy --only functions,hosting
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           PROJECT_ID: kaaykostore
