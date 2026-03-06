@@ -1,0 +1,204 @@
+{
+    "cameras": [
+        {
+            "modelName": "Sony Alpha a6300",
+            "releaseDate": "2016-03-10",
+            "sensorType": "APS-C CMOS (24.2 MP)",
+            "ISO": "100–25600 (expandable to 51200)",
+            "shutterSpeed": "30s – 1/4000s",
+            "IBIS": false,
+            "autofocus": "425 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a6500",
+            "releaseDate": "2016-12-06",
+            "sensorType": "APS-C CMOS (24.2 MP)",
+            "ISO": "100–25600 (expandable to 51200)",
+            "shutterSpeed": "30s – 1/4000s",
+            "IBIS": true,
+            "autofocus": "425 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a9",
+            "releaseDate": "2017-05-25",
+            "sensorType": "Full-frame Stacked CMOS (24.2 MP)",
+            "ISO": "100–51200 (expandable to 50–204800)",
+            "shutterSpeed": "30s – 1/8000s (electronic up to 1/32000s)",
+            "IBIS": true,
+            "autofocus": "693 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a7R III",
+            "releaseDate": "2017-11-30",
+            "sensorType": "Full-frame BSI CMOS (42.4 MP)",
+            "ISO": "100–32000 (expandable to 50–102400)",
+            "shutterSpeed": "30s – 1/8000s",
+            "IBIS": true,
+            "autofocus": "399 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a7 III",
+            "releaseDate": "2018-03-23",
+            "sensorType": "Full-frame BSI CMOS (24.2 MP)",
+            "ISO": "100–51200 (expandable to 50–204800)",
+            "shutterSpeed": "30s – 1/8000s",
+            "IBIS": true,
+            "autofocus": "693 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a6400",
+            "releaseDate": "2019-02-28",
+            "sensorType": "APS-C CMOS (24.2 MP)",
+            "ISO": "100–32000 (expandable to 102400)",
+            "shutterSpeed": "30s – 1/4000s",
+            "IBIS": false,
+            "autofocus": "425 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a7R IV",
+            "releaseDate": "2019-09-12",
+            "sensorType": "Full-frame BSI CMOS (61 MP)",
+            "ISO": "100–32000 (expandable to 50–102400)",
+            "shutterSpeed": "30s – 1/8000s",
+            "IBIS": true,
+            "autofocus": "567 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a6600",
+            "releaseDate": "2019-11-01",
+            "sensorType": "APS-C CMOS (24.2 MP)",
+            "ISO": "100–32000 (expandable to 102400)",
+            "shutterSpeed": "30s – 1/4000s",
+            "IBIS": true,
+            "autofocus": "425 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a9 II",
+            "releaseDate": "2019-11-06",
+            "sensorType": "Full-frame Stacked CMOS (24.2 MP)",
+            "ISO": "100–51200 (expandable to 50–204800)",
+            "shutterSpeed": "30s – 1/8000s (electronic up to 1/32000s)",
+            "IBIS": true,
+            "autofocus": "693 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a7S III",
+            "releaseDate": "2020-09-24",
+            "sensorType": "Full-frame BSI CMOS (12.1 MP)",
+            "ISO": "80–102400 (expandable to 40–409600)",
+            "shutterSpeed": "30s – 1/8000s",
+            "IBIS": true,
+            "autofocus": "759 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a7C",
+            "releaseDate": "2020-10-23",
+            "sensorType": "Full-frame BSI CMOS (24.2 MP)",
+            "ISO": "100–51200 (expandable to 50–204800)",
+            "shutterSpeed": "30s – 1/4000s",
+            "IBIS": true,
+            "autofocus": "693 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a1",
+            "releaseDate": "2021-03-04",
+            "sensorType": "Full-frame Stacked CMOS (50.1 MP)",
+            "ISO": "100–32000 (expandable to 50–102400)",
+            "shutterSpeed": "30s – 1/8000s (electronic up to 1/32000s)",
+            "IBIS": true,
+            "autofocus": "759 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a7 IV",
+            "releaseDate": "2021-12-23",
+            "sensorType": "Full-frame BSI CMOS (33 MP)",
+            "ISO": "100–51200 (expandable to 50–204800)",
+            "shutterSpeed": "30s – 1/8000s",
+            "IBIS": true,
+            "autofocus": "759 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony ZV-E10",
+            "releaseDate": "2021-08-27",
+            "sensorType": "APS-C CMOS (24.2 MP)",
+            "ISO": "100–32000 (expandable to 50–51200)",
+            "shutterSpeed": "30s – 1/4000s",
+            "IBIS": false,
+            "autofocus": "425 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a7R V",
+            "releaseDate": "2022-12-15",
+            "sensorType": "Full-frame BSI CMOS (61 MP)",
+            "ISO": "100–32000 (expandable to 50–102400)",
+            "shutterSpeed": "30s – 1/8000s",
+            "IBIS": true,
+            "autofocus": "693 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony ZV-E1",
+            "releaseDate": "2023-03-29",
+            "sensorType": "Full-frame BSI CMOS (12.1 MP)",
+            "ISO": "80–102400 (expandable to 40–409600)",
+            "shutterSpeed": "30s – 1/8000s",
+            "IBIS": true,
+            "autofocus": "Fast Hybrid AF with 759 phase-detection points (still images), 627 phase-detection points (movies); Real-time Eye AF, Real-time Tracking, AI-based subject recognition (Human, Animal, Bird, Insect, Car, Train, Airplane); AF Transition Speed and Subject Shift Sensitivity adjustments; Touch Focus and Touch Tracking",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a6700",
+            "releaseDate": "2023-08-01",
+            "sensorType": "APS-C BSI CMOS (26 MP)",
+            "ISO": "100–32000 (expandable to 50–102400)",
+            "shutterSpeed": "30s – 1/8000s",
+            "IBIS": true,
+            "autofocus": "759 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a7C II",
+            "releaseDate": "2023-09-29",
+            "sensorType": "Full-frame BSI CMOS (33 MP)",
+            "ISO": "100–51200 (expandable to 50–204800)",
+            "shutterSpeed": "30s – 1/4000s",
+            "IBIS": true,
+            "autofocus": "759 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a7CR",
+            "releaseDate": "2023-09-29",
+            "sensorType": "Full-frame BSI CMOS (61 MP)",
+            "ISO": "100–32000 (expandable to 50–102400)",
+            "shutterSpeed": "30s – 1/4000s",
+            "IBIS": true,
+            "autofocus": "693 phase-detection points",
+            "lensMount": "E-mount"
+        },
+        {
+            "modelName": "Sony Alpha a9 III",
+            "releaseDate": "2023-11-08",
+            "sensorType": "Full-frame Stacked CMOS (24.6 MP)",
+            "ISO": "100–51200 (expandable to 50–204800)",
+            "shutterSpeed": "30s – 1/8000s (electronic shutter up to 1/32000s)",
+            "IBIS": true,
+            "autofocus": "759 phase-detection points with Real-time Eye AF and Real-time Tracking",
+            "lensMount": "E-mount"
+        }
+    ]
+}

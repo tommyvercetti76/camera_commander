@@ -1,0 +1,69 @@
+# ── CREDENTIALS — NEVER COMMIT ───────────────────────────────────────────────
+*service-account*.json
+*service_account*.json
+kaaykostore-sa.json
+*-sa.json
+*.pem
+*.p12
+*.key
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+.firebaserc.local
+.emulator.log
+.web.log
+
+# ── NODE / NPM ────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+.npm
+
+# ── PYTHON ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.Python
+venv/
+env/
+.venv/
+
+# ── BUILD OUTPUTS ─────────────────────────────────────────────────────────────
+public/
+dist/
+build/
+*.min.js
+*.min.css
+
+# ── OS FILES ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.sublime-project
+
+# ── TESTING ───────────────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ── AGENT SPEC / INTERNAL DOCS ────────────────────────────────────────────────
+agent_api.txt
+agent_cli.txt
+agent_data.txt
+agent_frontend.txt
+agent_infra.txt
+masterOrchestration.txt
+acceptance_v2.txt
+API_Details/
+

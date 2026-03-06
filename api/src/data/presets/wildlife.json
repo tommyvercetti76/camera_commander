@@ -1,0 +1,126 @@
+{
+  "genre": "wildlife",
+  "displayName": "Wildlife",
+  "conditions": {
+    "BIRDS_IN_FLIGHT": {
+      "displayName": "Birds in Flight",
+      "ISO": 400, "aperture": 6.3, "shutterSpeed": "1/2000",
+      "mode": "Shutter Priority", "afMode": "Continuous AF", "afPoint": "Subject Tracking",
+      "metering": "Evaluative", "driveMode": "Continuous High",
+      "requiresTripod": false, "requiresTracking": true, "requiresNDFilter": false,
+      "ibisBonus": false, "difficulty": "advanced",
+      "rationale": "1/2000s freezes wing tip motion. Continuous AF with subject tracking keeps fast-moving birds in focus.",
+      "proTip": "Pre-focus on a perched bird, then switch to tracking mode when it takes flight to maintain AF lock.",
+      "commonMistake": "Using single-shot AF loses focus the instant the bird moves—always use continuous tracking AF.",
+      "tags": ["birds", "flight", "action", "tracking"]
+    },
+    "LARGE_MAMMAL_RUNNING": {
+      "displayName": "Large Mammal Running",
+      "ISO": 200, "aperture": 5.6, "shutterSpeed": "1/1000",
+      "mode": "Shutter Priority", "afMode": "Continuous AF", "afPoint": "Subject Tracking",
+      "metering": "Evaluative", "driveMode": "Continuous High",
+      "requiresTripod": false, "requiresTracking": true, "requiresNDFilter": false,
+      "ibisBonus": false, "difficulty": "advanced",
+      "rationale": "1/1000s freezes galloping gait. f/5.6 provides enough depth to keep the whole animal sharp.",
+      "proTip": "Pan with the animal as it runs—this keeps the animal sharp while blurring the background for a sense of speed.",
+      "commonMistake": "Stopping the pan at the moment of exposure creates blur—follow through as if throwing a bowling ball.",
+      "tags": ["mammals", "running", "action", "panning"]
+    },
+    "STATIC_WILDLIFE": {
+      "displayName": "Static Wildlife",
+      "ISO": 100, "aperture": 8, "shutterSpeed": "1/500",
+      "mode": "Aperture Priority", "afMode": "Single AF", "afPoint": "Center",
+      "metering": "Evaluative", "driveMode": "Single Shot",
+      "requiresTripod": false, "requiresTracking": false, "requiresNDFilter": false,
+      "ibisBonus": false, "difficulty": "beginner",
+      "rationale": "Low ISO + f/8 for maximum detail on perched or stationary animals. Fast enough shutter for any unexpected movement.",
+      "proTip": "Get to eye level with your subject—looking down on wildlife creates a domineering perspective that feels unnatural.",
+      "commonMistake": "Shooting from standing height makes everything look small and unimpressive. Get low!",
+      "tags": ["static", "portrait", "detail", "eye level"]
+    },
+    "LOW_LIGHT_WILDLIFE": {
+      "displayName": "Low Light Wildlife",
+      "ISO": 1600, "aperture": 4, "shutterSpeed": "1/250",
+      "mode": "Aperture Priority", "afMode": "Continuous AF", "afPoint": "Subject Tracking",
+      "metering": "Evaluative", "driveMode": "Continuous Low",
+      "requiresTripod": false, "requiresTracking": true, "requiresNDFilter": false,
+      "ibisBonus": true, "difficulty": "advanced",
+      "rationale": "Dawn and dusk are peak activity times for wildlife. ISO 1600 is acceptable noise for the reward of behavioral shots.",
+      "proTip": "Modern high-ISO performance is excellent—don't fear ISO 3200 if it means getting the shot at a critical moment.",
+      "commonMistake": "Refusing to raise ISO beyond 800 means missing peak activity during golden hour light.",
+      "tags": ["low light", "dawn", "dusk", "golden hour"]
+    },
+    "SMALL_BIRD_OVERCAST": {
+      "displayName": "Small Bird Overcast",
+      "ISO": 3200, "aperture": 5.6, "shutterSpeed": "1/3200",
+      "mode": "Shutter Priority", "afMode": "Continuous AF", "afPoint": "Subject Tracking",
+      "metering": "Evaluative", "driveMode": "Continuous High",
+      "requiresTripod": false, "requiresTracking": true, "requiresNDFilter": false,
+      "ibisBonus": false, "difficulty": "advanced",
+      "rationale": "Small birds move erratically at high speed. 1/3200 freezes wing beats. High ISO compensates for overcast conditions.",
+      "proTip": "Use a 600mm+ telephoto to maintain working distance without disturbing the bird's natural behavior.",
+      "commonMistake": "Getting too close to small birds causes them to flush—maintain distance and let the telephoto do the work.",
+      "tags": ["small birds", "overcast", "high ISO", "erratic movement"]
+    },
+    "PANNING_CREATIVE": {
+      "displayName": "Panning Creative Effect",
+      "ISO": 100, "aperture": 16, "shutterSpeed": "1/30",
+      "mode": "Shutter Priority", "afMode": "Continuous AF", "afPoint": "Center",
+      "metering": "Evaluative", "driveMode": "Continuous Low",
+      "requiresTripod": false, "requiresTracking": false, "requiresNDFilter": true,
+      "ibisBonus": false, "difficulty": "advanced",
+      "rationale": "Slow shutter panned with subject motion. f/16 and ND filter prevent overexposure in daylight at 1/30.",
+      "proTip": "Practice on predictable subjects first—racing cars work better than wildlife for learning panning technique.",
+      "commonMistake": "Varying the pan speed during exposure causes uneven motion blur that looks like a mistake.",
+      "tags": ["panning", "motion blur", "creative", "ND filter"]
+    },
+    "SILHOUETTE_SUNSET": {
+      "displayName": "Silhouette at Sunset",
+      "ISO": 200, "aperture": 8, "shutterSpeed": "1/1000",
+      "mode": "Manual", "afMode": "Continuous AF", "afPoint": "Center",
+      "metering": "Spot", "driveMode": "Continuous High",
+      "requiresTripod": false, "requiresTracking": false, "requiresNDFilter": false,
+      "ibisBonus": false, "difficulty": "intermediate",
+      "rationale": "Expose for the bright sky. f/8 and fast shutter freeze animal outline perfectly against the burning sky.",
+      "proTip": "Know animal silhouettes—animals with distinctive shapes (giraffes, elephants, birds with spread wings) work best.",
+      "commonMistake": "Choosing animals with unclear silhouettes creates confusing images where the subject isn't identifiable.",
+      "tags": ["silhouette", "sunset", "dramatic", "wildlife"]
+    },
+    "SHADE_STATIC": {
+      "displayName": "Shade Static Animal",
+      "ISO": 1250, "aperture": 4, "shutterSpeed": "1/500",
+      "mode": "Aperture Priority", "afMode": "Single AF", "afPoint": "Eye Detection",
+      "metering": "Evaluative", "driveMode": "Single Shot",
+      "requiresTripod": false, "requiresTracking": false, "requiresNDFilter": false,
+      "ibisBonus": true, "difficulty": "intermediate",
+      "rationale": "Shaded animals require elevated ISO. Eye detection AF locks accurately on animal eyes for intimate portraits.",
+      "proTip": "Animals in shade often display natural behavior—hunting, grooming, feeding. Patience rewards with authentic shots.",
+      "commonMistake": "Metering for the bright background underexposes the subject—spot meter off the animal's body.",
+      "tags": ["shade", "behavior", "eye detection", "intimate"]
+    },
+    "BLACK_AND_WHITE_WILDLIFE": {
+      "displayName": "Black & White Wildlife",
+      "ISO": 400, "aperture": 5.6, "shutterSpeed": "1/1000",
+      "mode": "Aperture Priority", "afMode": "Continuous AF", "afPoint": "Subject Tracking",
+      "metering": "Evaluative", "driveMode": "Continuous High",
+      "requiresTripod": false, "requiresTracking": true, "requiresNDFilter": false,
+      "ibisBonus": false, "difficulty": "intermediate",
+      "rationale": "Monochrome emphasizes texture, form, and emotion over color. Works perfectly for dramatic animal portraits.",
+      "proTip": "Strong sidelight or backlight creates better tonal separation in B&W than flat frontal light.",
+      "commonMistake": "Choosing subjects without strong texture or form—smooth-furred animals in flat light make dull B&W images.",
+      "tags": ["black and white", "texture", "dramatic", "portrait"]
+    },
+    "REFLECTIONS_WILDLIFE": {
+      "displayName": "Wildlife Reflections",
+      "ISO": 800, "aperture": 5.6, "shutterSpeed": "1/500",
+      "mode": "Aperture Priority", "afMode": "Single AF", "afPoint": "Subject",
+      "metering": "Evaluative", "driveMode": "Continuous Low",
+      "requiresTripod": false, "requiresTracking": false, "requiresNDFilter": false,
+      "ibisBonus": false, "difficulty": "intermediate",
+      "rationale": "Animals at watering holes create stunning reflection compositions. f/5.6 keeps both animal and reflection reasonably sharp.",
+      "proTip": "Get your lens as close to the water surface as possible—even 1cm above creates the most dramatic reflection perspective.",
+      "commonMistake": "Shooting from eye-standing height eliminates the close reflection perspective. Get low to the ground.",
+      "tags": ["reflection", "water", "composition", "watering hole"]
+    }
+  }
+}
