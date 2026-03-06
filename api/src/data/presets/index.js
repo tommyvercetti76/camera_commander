@@ -11,4 +11,13 @@ module.exports = {
   architecture:   require('./architecture.json'),
   event:          require('./event.json'),
   travel:         require('./travel.json'),
+  food:           require('./food.json'),
+  realestate:     require('./realestate.json'),
+  automotive:     require('./automotive.json'),
+  product:        require('./product.json'),
+  concert:        require('./concert.json'),
+  underwater:     require('./underwater.json'),
+  drone:          require('./drone.json'),
+  newborn:        require('./newborn.json'),
+  fashion:        require('./fashion.json'),
 };

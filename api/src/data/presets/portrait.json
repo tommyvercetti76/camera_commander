@@ -426,6 +426,84 @@
         "double exposure",
         "abstract"
       ]
+    },
+    "NEWBORN_STUDIO": {
+      "displayName": "Newborn Studio",
+      "ISO": 400,
+      "aperture": 5.6,
+      "shutterSpeed": "1/160",
+      "mode": "M",
+      "afMode": "single",
+      "afPoint": "tracking",
+      "metering": "evaluative",
+      "driveMode": "single",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 2,
+      "rationale": "f/5.6 provides enough depth of field for a full newborn body photographed from above. 1/160s ensures no motion blur from startle reflexes. ISO 400 minimises noise without grain visible in soft skin.",
+      "proTip": "Use a large octobox or north-facing window at 45 degrees to eliminate harsh shadows. Silent electronic shutter prevents startle reactions. Set white balance warm (3200-4000K) for correct skin tone.",
+      "commonMistake": "Using flash at full power. Newborns are photosensitive. Use bounce flash at -2EV or continuous LED lighting at 3200K. Silent shutter is critical \u2014 mirror slap causes startle reflex.",
+      "tags": [
+        "newborn",
+        "baby",
+        "studio",
+        "natural light",
+        "silent shutter"
+      ]
+    },
+    "EDITORIAL_HIGH_FASHION": {
+      "displayName": "Editorial High Fashion",
+      "ISO": 100,
+      "aperture": 8,
+      "shutterSpeed": "1/160",
+      "mode": "M",
+      "afMode": "single",
+      "afPoint": "tracking",
+      "metering": "evaluative",
+      "driveMode": "continuous_low",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 2,
+      "rationale": "f/8 provides full sharpness from face to fingertips \u2014 editorial demands technical perfection throughout. ISO 100 for maximum dynamic range and tonal gradation. 1/160 syncs with studio strobe.",
+      "proTip": "Use a 1.2-1.4m Profoto octabox at camera-left as key, silver reflector camera-right as fill. Check histogram on every frame. Magazine editors expect technically perfect exposures with no clipping.",
+      "commonMistake": "Shooting wide open (f/1.4-f/2.8) for fashion \u2014 atmospheric, but editorial clients demand sharpness throughout the frame. f/8 is the industry standard for technical fashion photography.",
+      "tags": [
+        "fashion",
+        "editorial",
+        "studio",
+        "strobe",
+        "commercial"
+      ]
+    },
+    "MATERNITY_OUTDOOR": {
+      "displayName": "Maternity Outdoor",
+      "ISO": 100,
+      "aperture": 2.8,
+      "shutterSpeed": "1/400",
+      "mode": "Av",
+      "afMode": "single",
+      "afPoint": "tracking",
+      "metering": "evaluative",
+      "driveMode": "single",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 1,
+      "rationale": "f/2.8 provides shallow depth of field that separates the subject from background. 1/400s ensures no motion blur in flowing garments. Golden hour side lighting reveals form at its most flattering.",
+      "proTip": "Shoot 45 minutes before sunset for soft directional light that reveals the silhouette. Position subject so the sun backlights the profile. The bump reads best from the side in warm light.",
+      "commonMistake": "Shooting at noon with flat overhead light \u2014 this removes all form definition. Golden hour or open shade only. Avoid backlit locations where harsh sun hits the camera lens directly.",
+      "tags": [
+        "maternity",
+        "pregnancy",
+        "outdoor",
+        "golden hour",
+        "silhouette"
+      ]
     }
   }
 }

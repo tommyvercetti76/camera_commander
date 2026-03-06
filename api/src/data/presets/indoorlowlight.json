@@ -206,7 +206,7 @@
       "displayName": "Dance Floor",
       "ISO": 6400,
       "aperture": 2.8,
-      "shutterSpeed": "1/250",
+      "shutterSpeed": "1/320",
       "mode": "M",
       "afMode": "continuous",
       "afPoint": "tracking",
@@ -219,7 +219,7 @@
       "difficulty": 3,
       "rationale": "Fast-moving dancers in dim conditions require maximum ISO and fast shutter. Colored dance floor lights add character.",
       "proTip": "Sync your burst to the beat\u2014dancers hit their peak movements on the musical beat. Anticipate it.",
-      "commonMistake": "Using flash on a dance floor freezes all the ambient motion and color\u2014defeating the dynamic atmosphere.",
+      "commonMistake": "Using 1/250s \u2014 fast arm movements and spinning dancers will show motion blur at that speed. Push to 1/400 and raise ISO if you still see blur.",
       "tags": [
         "dance",
         "nightlife",

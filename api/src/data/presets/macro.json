@@ -180,7 +180,7 @@
     "MACRO_EXTREME_CLOSEUP": {
       "displayName": "Extreme Close-up",
       "ISO": 200,
-      "aperture": 22,
+      "aperture": 11,
       "shutterSpeed": "1/100",
       "mode": "M",
       "afMode": "manual",
@@ -193,8 +193,8 @@
       "ibisBonus": false,
       "difficulty": 3,
       "rationale": "Magnification beyond 1:1 requires extension tubes. Every millimeter of depth shifts matters.",
-      "proTip": "Use focus stacking software (Zerene Stacker, Helicon Focus) to combine multiple focus planes into one sharp image.",
-      "commonMistake": "Trying to solve depth-of-field with small apertures alone creates diffraction at extreme magnifications.",
+      "proTip": "Use focus stacking at f/11 across 15\u201330 exposures for maximum sharpness and depth. f/22 appears to offer more DOF but diffraction softening negates all fine detail on sensors above 20MP. Stack in Helicon Focus or Zerene Stacker.",
+      "commonMistake": "Choosing f/22 for more depth of field at extreme magnification. Diffraction kicks in hard above f/11 on modern sensors \u2014 the resulting image is softer than f/11 despite the smaller aperture.",
       "tags": [
         "extreme macro",
         "extension tubes",
@@ -375,6 +375,58 @@
         "abstract",
         "creative",
         "water droplets"
+      ]
+    },
+    "MACRO_FOCUS_STACK_SETUP": {
+      "displayName": "Macro Focus Stack Setup",
+      "ISO": 100,
+      "aperture": 11,
+      "shutterSpeed": "1/160",
+      "mode": "M",
+      "afMode": "manual",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "interval_timer",
+      "requiresTripod": true,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 3,
+      "rationale": "Focus stacking requires absolute consistency between frames. f/11 provides enough depth of field per frame for clean transitions in post while avoiding diffraction. Manual mode prevents any exposure variation that would destroy the composite.",
+      "proTip": "Use a focusing rail for repeatable 0.1mm increments. 15-30 frames at f/11 typically covers a small insect from eyes to wingtips. Stack in Helicon Focus or Zerene Stacker for best results.",
+      "commonMistake": "Shooting at f/22 for perceived maximum depth \u2014 the DOF advantage of f/22 over f/11 is marginal at macro distances, but diffraction softening is severe and obvious on sensors above 20MP. Always stack at f/11.",
+      "tags": [
+        "focus stack",
+        "macro",
+        "stacking",
+        "rail",
+        "detail"
+      ]
+    },
+    "SNOWFLAKE_MACRO": {
+      "displayName": "Snowflake Macro",
+      "ISO": 100,
+      "aperture": 16,
+      "shutterSpeed": "1/200",
+      "mode": "M",
+      "afMode": "manual",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "single",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 3,
+      "rationale": "Snowflakes melt in 30-90 seconds requiring fast, precise work. Handheld with macro flash. f/16 provides adequate depth at high magnification. Ring flash or twin flash sync at 1/200s.",
+      "proTip": "Pre-chill camera and lens before going outside \u2014 a warm lens fogs instantly in cold air from condensation. Catch flakes on black velvet or a cold glass slide. Work in shade \u2014 direct sunlight melts crystals in seconds.",
+      "commonMistake": "Bringing warm equipment outside without acclimatisation \u2014 lens condensation instantly ruins images. Keep equipment cold throughout the session, store it in a cool bag between shoots.",
+      "tags": [
+        "snowflake",
+        "crystal",
+        "winter",
+        "macro flash",
+        "nature"
       ]
     }
   }

@@ -251,6 +251,111 @@
         "creative",
         "dramatic"
       ]
+    },
+    "SWIMMING_POOL_AQUATICS": {
+      "displayName": "Swimming Pool Aquatics",
+      "ISO": 1600,
+      "aperture": 2.8,
+      "shutterSpeed": "1/1000",
+      "mode": "Tv",
+      "afMode": "continuous",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "continuous_high",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 2,
+      "rationale": "Indoor pool lighting is typically tungsten or fluorescent at EV 8-10. 1/1000s freezes water splashes and swimmer arms. f/2.8 is mandatory to maintain adequate exposure.",
+      "proTip": "Shoot just after the turn \u2014 swimmers are fastest and create the most dynamic water spray. The peak dramatic moment is breaching the surface at the wall.",
+      "commonMistake": "Underestimating competitive swimmer speed \u2014 1/500s still shows motion blur at Olympic or competitive level. Use 1/1000s minimum for crisp freeze frames.",
+      "tags": [
+        "swimming",
+        "aquatics",
+        "pool",
+        "splash",
+        "indoor sports"
+      ]
+    },
+    "CYCLING_ROAD_PANNING": {
+      "displayName": "Cycling Road Panning",
+      "ISO": 200,
+      "aperture": 8,
+      "shutterSpeed": "1/125",
+      "mode": "Tv",
+      "afMode": "continuous",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "continuous_high",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 3,
+      "rationale": "Panning with cyclists at 40-60km/h requires 1/60-1/125s to blur the background while keeping the rider sharp. f/8 provides depth margin if the pan timing isn't perfect.",
+      "proTip": "Position yourself at exactly 90 degrees to the road for maximum panning blur effect. Follow the rider for at least 2 full seconds before pressing the shutter.",
+      "commonMistake": "Panning from the shoulders \u2014 this creates unwanted vertical movement that blurs the rider vertically. Pan exclusively from the waist, keeping the camera perfectly level throughout.",
+      "tags": [
+        "cycling",
+        "panning",
+        "motion blur",
+        "road",
+        "action"
+      ]
+    },
+    "BOXING_MMA_INDOOR": {
+      "displayName": "Boxing and MMA Indoor",
+      "ISO": 6400,
+      "aperture": 2.8,
+      "shutterSpeed": "1/1000",
+      "mode": "Tv",
+      "afMode": "continuous",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "continuous_high",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 3,
+      "rationale": "Combat sports arenas are typically EV 6-8. Punches reach 30-50km/h at impact and require 1/1000s minimum to freeze cleanly. f/2.8 is mandatory for adequate exposure.",
+      "proTip": "Focus on the gloves rather than the face for decisive impact moments. Anticipate the punch and begin the burst half a second before the glove connects.",
+      "commonMistake": "Shooting at 1/500s \u2014 arm speed in combat sports makes gloves completely blurred at that speed. 1/1000s is the absolute minimum for clean punch freeze frames.",
+      "tags": [
+        "boxing",
+        "MMA",
+        "combat",
+        "martial arts",
+        "indoor",
+        "action"
+      ]
+    },
+    "EQUESTRIAN_JUMP": {
+      "displayName": "Equestrian Show Jumping",
+      "ISO": 400,
+      "aperture": 6.3,
+      "shutterSpeed": "1/2000",
+      "mode": "Tv",
+      "afMode": "continuous",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "continuous_high",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 2,
+      "rationale": "Horse and rider at the apex of a jump \u2014 the body is momentarily suspended. 1/2000s freezes hooves cleanly mid-air with no motion blur on the legs.",
+      "proTip": "Position at the far side of the fence, not the approach side \u2014 this gives you the profile shot with horse and rider in full suspended form. Start the burst three strides before the jump.",
+      "commonMistake": "Firing the shutter too late \u2014 the peak moment is when all four hooves are off the ground at the apex. Start the burst before the horse leaves the ground and let the buffer capture the peak.",
+      "tags": [
+        "equestrian",
+        "horse",
+        "jump",
+        "show jumping",
+        "outdoor sports"
+      ]
     }
   }
 }

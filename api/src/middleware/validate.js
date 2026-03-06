@@ -7,7 +7,9 @@ const VALID_BRANDS = ['canon', 'sony'];
 const VALID_GENRES = [
   'portrait', 'landscape', 'astro', 'wildlife', 'sports',
   'macro', 'indoorlowlight', 'goldenhour', 'street',
-  'architecture', 'event', 'travel'
+  'architecture', 'event', 'travel',
+  'food', 'realestate', 'automotive', 'product',
+  'concert', 'underwater', 'drone', 'newborn', 'fashion',
 ];
 
 // Valid modes — these are the four user archetypes

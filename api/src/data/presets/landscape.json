@@ -476,6 +476,83 @@
         "symmetry",
         "mirror"
       ]
+    },
+    "STORM_LIGHTNING": {
+      "displayName": "Storm and Lightning",
+      "ISO": 100,
+      "aperture": 8,
+      "shutterSpeed": "30",
+      "mode": "M",
+      "afMode": "manual",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "interval_timer",
+      "requiresTripod": true,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 3,
+      "rationale": "Bulb or 30s exposure in the dark means any lightning bolt that fires during the exposure registers automatically. ISO 100 because lightning is extremely bright \u2014 the bolt itself provides the light.",
+      "proTip": "Point into the storm cell, not directly at individual lightning. Use a cable release or intervalometer. In light-polluted skies, narrow to f/16 to avoid overexposing the background.",
+      "commonMistake": "Using autofocus in the dark \u2014 the camera hunts and misses the shot entirely. Set manual focus to infinity before the storm arrives, then lock it.",
+      "tags": [
+        "lightning",
+        "storm",
+        "long exposure",
+        "bulb",
+        "weather"
+      ]
+    },
+    "TIME_LAPSE_SETUP": {
+      "displayName": "Time Lapse Setup",
+      "ISO": 400,
+      "aperture": 5.6,
+      "shutterSpeed": "1/50",
+      "mode": "M",
+      "afMode": "manual",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "interval_timer",
+      "requiresTripod": true,
+      "requiresTracking": false,
+      "requiresNDFilter": true,
+      "ibisBonus": false,
+      "difficulty": 2,
+      "rationale": "The 180-degree shutter rule: shutter speed = double the frame interval. For 25fps playback with 1-second intervals, 1/50s is correct. ND filter required in daylight to achieve 1/50s. Manual mode is mandatory \u2014 any aperture variation causes flicker.",
+      "proTip": "Deflicker in post using LRTimelapse or DaVinci Resolve. Shoot RAW for maximum dynamic range. Use ND8-ND64 to achieve 1/50s in bright daylight.",
+      "commonMistake": "Using aperture priority \u2014 any aperture micro-shift between frames causes visible flicker in the final video. Manual mode only, every time.",
+      "tags": [
+        "timelapse",
+        "ND filter",
+        "video",
+        "interval",
+        "motion"
+      ]
+    },
+    "SNOWY_SCENE": {
+      "displayName": "Snowy Scene",
+      "ISO": 100,
+      "aperture": 11,
+      "shutterSpeed": "1/250",
+      "mode": "Av",
+      "afMode": "single",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "single",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 1,
+      "rationale": "Snow reflects ~90% of light and fools evaluative metering into underexposing \u2014 the camera renders snow as grey. Set +1 to +1.5EV exposure compensation to restore white snow.",
+      "proTip": "Use spot or centre-weighted metering on a mid-tone in the scene (a coat, bare tree bark) instead of the snow itself. Or set evaluative metering with +1.3EV compensation.",
+      "commonMistake": "Trusting evaluative metering on snow \u2014 the image will look grey and underexposed. Always apply positive exposure compensation in snowy scenes.",
+      "tags": [
+        "snow",
+        "winter",
+        "exposure compensation",
+        "metering"
+      ]
     }
   }
 }

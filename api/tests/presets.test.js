@@ -15,11 +15,13 @@ const VALID_METERING  = new Set(['evaluative', 'spot', 'center-weighted']);
 const VALID_DRIVE     = new Set(['single', 'continuous_low', 'continuous_high', 'interval_timer', 'self_timer_2s']);
 
 describe('Preset data integrity', () => {
-  test('all 12 genres are present', () => {
+  test('all 21 genres are present', () => {
     const expected = [
       'portrait', 'landscape', 'astro', 'wildlife', 'sports',
       'macro', 'indoorlowlight', 'goldenhour', 'street',
-      'architecture', 'event', 'travel'
+      'architecture', 'event', 'travel',
+      'food', 'realestate', 'automotive', 'product',
+      'concert', 'underwater', 'drone', 'newborn', 'fashion',
     ];
     for (const genre of expected) {
       expect(allPresets).toHaveProperty(genre);

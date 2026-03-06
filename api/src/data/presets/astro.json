@@ -376,6 +376,82 @@
         "rare event",
         "safety critical"
       ]
+    },
+    "MILKY_WAY_APS_C_CROP": {
+      "displayName": "Milky Way APS-C Crop",
+      "ISO": 3200,
+      "aperture": 2.8,
+      "shutterSpeed": "12",
+      "mode": "M",
+      "afMode": "manual",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "self_timer_2s",
+      "requiresTripod": true,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 2,
+      "rationale": "APS-C crop factor (1.5-1.6x) shortens the safe shutter at any given focal length. On a 24mm lens: 500 / (24 x 1.6) = 13s maximum before star trailing \u2014 12s for safety.",
+      "proTip": "Use the NPF rule for precision: (35 x aperture + 30 x pixel_pitch) / focal_length_equivalent. On a 24MP APS-C sensor this gives ~10-12s at 24mm f/2.8.",
+      "commonMistake": "Applying the 20-second rule from full-frame guides to an APS-C camera. This produces star trails on crop sensors. Always apply the crop factor to your maximum shutter calculation.",
+      "tags": [
+        "milky way",
+        "aps-c",
+        "crop sensor",
+        "star trails"
+      ]
+    },
+    "LUNAR_ECLIPSE_BLOOD_MOON": {
+      "displayName": "Lunar Eclipse / Blood Moon",
+      "ISO": 1600,
+      "aperture": 2.8,
+      "shutterSpeed": "2",
+      "mode": "M",
+      "afMode": "manual",
+      "afPoint": "wide",
+      "metering": "spot",
+      "driveMode": "self_timer_2s",
+      "requiresTripod": true,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 3,
+      "rationale": "During totality the Moon dims by ~10,000x compared to a full moon. The existing ECLIPSE_PHOTOGRAPHY preset is correct for solar eclipses and partial phases, but completely wrong for the blood moon totality phase.",
+      "proTip": "Expose for the red colour, not the bright limb edge. Use live histogram and adjust continuously as the Moon dims. During partial phases bracket every 30 seconds.",
+      "commonMistake": "Using the same settings throughout the entire eclipse. Brightness changes 10,000x from full moon to totality \u2014 you must continuously adjust ISO and shutter as the eclipse progresses.",
+      "tags": [
+        "eclipse",
+        "blood moon",
+        "lunar",
+        "totality"
+      ]
+    },
+    "DEEP_SKY_UNTRACKED": {
+      "displayName": "Deep Sky Untracked",
+      "ISO": 12800,
+      "aperture": 2.8,
+      "shutterSpeed": "15",
+      "mode": "M",
+      "afMode": "manual",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "interval_timer",
+      "requiresTripod": true,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 3,
+      "rationale": "For those without a tracking mount. Maximum ISO compensates for the limited 15s exposure. Stack 20-50 frames in post to reduce noise. Only bright nebulae near the galactic core are realistic targets without tracking.",
+      "proTip": "Stack using Sequator (free, Windows) or Siril (free, Mac/PC). 20 stacked untracked frames beats a single 5-minute tracked frame for noise reduction.",
+      "commonMistake": "Attempting 120s without tracking produces star trails, not nebulae. Invest in a star tracker (iOptron SkyGuider Pro, Sky-Watcher Star Adventurer) before attempting deep sky objects.",
+      "tags": [
+        "deep sky",
+        "nebula",
+        "untracked",
+        "stacking",
+        "high ISO"
+      ]
     }
   }
 }

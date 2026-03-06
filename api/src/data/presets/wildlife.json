@@ -251,6 +251,110 @@
         "composition",
         "watering hole"
       ]
+    },
+    "NOCTURNAL_WILDLIFE": {
+      "displayName": "Nocturnal Wildlife",
+      "ISO": 12800,
+      "aperture": 2.8,
+      "shutterSpeed": "1/125",
+      "mode": "Tv",
+      "afMode": "continuous",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "continuous_low",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": true,
+      "difficulty": 3,
+      "rationale": "Owls, foxes, badgers, and other nocturnal animals require maximum ISO and fastest aperture. 1/125s freezes most nocturnal movement without needing flash, which would disturb animals.",
+      "proTip": "Use a red-light torch at low intensity \u2014 most nocturnal animals cannot clearly detect red wavelengths and are less likely to be startled. An IR spotlight with an appropriate sensor opens further possibilities.",
+      "commonMistake": "Using white light \u2014 this immediately stops natural behaviour and causes animals to flee. Red light at low intensity is the professional standard for nocturnal wildlife observation.",
+      "tags": [
+        "nocturnal",
+        "night",
+        "high ISO",
+        "wildlife",
+        "low light"
+      ]
+    },
+    "CAPTIVE_ZOO_ENCLOSURE": {
+      "displayName": "Captive Zoo Enclosure",
+      "ISO": 1600,
+      "aperture": 2.8,
+      "shutterSpeed": "1/500",
+      "mode": "Tv",
+      "afMode": "continuous",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "continuous_high",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": true,
+      "difficulty": 2,
+      "rationale": "Wide aperture optically blurs enclosure bars and mesh fences. Fast shutter freezes unpredictable animal movement.",
+      "proTip": "Hold the lens directly against the mesh or glass to eliminate it optically. At f/2.8, mesh just 5cm from the front element disappears completely into bokeh.",
+      "commonMistake": "Shooting through glass at an angle \u2014 reflections destroy the shot. Position perpendicular to the glass and press a rubber lens hood against it to eliminate reflections.",
+      "tags": [
+        "zoo",
+        "enclosure",
+        "bars",
+        "bokeh",
+        "captive animals"
+      ]
+    },
+    "SAFARI_MOVING_VEHICLE": {
+      "displayName": "Safari from Moving Vehicle",
+      "ISO": 400,
+      "aperture": 5.6,
+      "shutterSpeed": "1/1000",
+      "mode": "Tv",
+      "afMode": "continuous",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "continuous_high",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": true,
+      "difficulty": 2,
+      "rationale": "Vehicle vibration and subject motion combine at safari speeds. 1/1000s eliminates both sources of blur and allows sharp shots from a moving vehicle.",
+      "proTip": "Use a beanbag over the window sill as a lens support \u2014 far more stable than handholding from a vehicle. Switch to electronic shutter to eliminate mirror slap vibration.",
+      "commonMistake": "Leaving IBIS/OIS active on a moving vehicle \u2014 stabilisation systems can misinterpret vehicle rocking as motion to compensate and actively introduce blur. Check your specific OIS mode.",
+      "tags": [
+        "safari",
+        "vehicle",
+        "motion",
+        "wildlife",
+        "africa"
+      ]
+    },
+    "HIDE_LONG_WAIT": {
+      "displayName": "Bird Hide / Wildlife Blind",
+      "ISO": 400,
+      "aperture": 6.3,
+      "shutterSpeed": "1/1000",
+      "mode": "Tv",
+      "afMode": "continuous",
+      "afPoint": "wide",
+      "metering": "evaluative",
+      "driveMode": "continuous_high",
+      "requiresTripod": false,
+      "requiresTracking": false,
+      "requiresNDFilter": false,
+      "ibisBonus": false,
+      "difficulty": 2,
+      "rationale": "Bird hides and wildlife blinds require pre-configured gear before the animal arrives. Pre-focused, pre-metered \u2014 no fumbling when the decisive moment happens.",
+      "proTip": "Set your camera to anticipated conditions before dawn. Let eyes adjust to darkness before opening the hide window. Pre-focus on the expected perch or feeding station.",
+      "commonMistake": "Leaving auto-ISO maximum range too high \u2014 in bright morning light auto-ISO may jump to ISO 6400 unnecessarily. Set auto-ISO max to 3200 for daylight hide work.",
+      "tags": [
+        "hide",
+        "blind",
+        "birds",
+        "patience",
+        "dawn"
+      ]
     }
   }
 }
