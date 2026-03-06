@@ -39,5 +39,16 @@ jobs:
         with:
           credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
 
-      - name: Deploy to Firebase
-        run: npx firebase-tools@latest deploy --only functions,hosting --project kaaykostore --non-interactive
+      - name: Deploy Cloud Functions
+        run: |
+          gcloud functions deploy api \
+            --runtime=nodejs20 \
+            --trigger-http \
+            --allow-unauthenticated \
+            --source=./api \
+            --entry-point=api \
+            --project=kaaykostore \
+            --region=us-central1
+
+      - name: Deploy Hosting
+        run: npx firebase-tools@latest deploy --only hosting --project kaaykostore --non-interactive
